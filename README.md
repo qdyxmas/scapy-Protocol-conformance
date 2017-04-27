@@ -16,6 +16,6 @@ dhcpserver.py</br>
 协议一致性
 pppoeclient.py:</br>
   主要用于模拟测试pppoe客户端拨号</br>
-  pppoe-tags 配置可选的pppoe-tags字段 servername ac-name 
-  lcp-options 配置可选的lcp-options  mru authentication-protocol 等信息
-  ipcp-options 配置可选的ipcp-options ip dns nbns等信息
+  pppoe-tags 配置可选的pppoe-tags字段 servername ac-name </br>
+  lcp-options 配置可选的lcp-options  mru authentication-protocol 等信息</br>
+  ipcp-options 配置可选的ipcp-options ip dns nbns等信息</br>
