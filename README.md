@@ -12,3 +12,10 @@ dhcpserver.py</br>
       1、正常的DHCP服务器功能</br>
       2、回应时能够对discover/request/T1时刻的request/T2时刻的request报文 进行延迟响应或者不响应</br>
 注意:使用其他options字段时,需要在scapy的dhcp.py的options选项中添加字段,否则不会下发</br>
+
+协议一致性
+pppoeclient.py:</br>
+  主要用于模拟测试pppoe客户端拨号</br>
+  pppoe-tags 配置可选的pppoe-tags字段 servername ac-name 
+  lcp-options 配置可选的lcp-options  mru authentication-protocol 等信息
+  ipcp-options 配置可选的ipcp-options ip dns nbns等信息
