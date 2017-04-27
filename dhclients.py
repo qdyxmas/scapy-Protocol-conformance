@@ -4,7 +4,6 @@
 u"""
 主要用于模块dhclient发送各种协议包
 """
-
 import random
 import sys
 import string,binascii,signal,sys,threading,socket,struct,getopt
