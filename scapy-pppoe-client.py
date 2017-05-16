@@ -31,6 +31,8 @@ class PppoeClient(threading.Thread):
         if kargs.has_key("smac"):
             self.smac=kargs['smac'].replace("-",":")
         self.filter="(pppoed or pppoes) and ether dst %s" %(self.smac)
+        self.client_info[self.smac]=[self.username]
+        self.client_info[self.smac].append(self.password)
     def parser(self,**kargs):
         for key,value in kargs.items():
             if key == "smac" or key == "dmac":
@@ -210,8 +212,10 @@ class PppoeClient(threading.Thread):
             ret['chall']=pkt.load[5:5+length]
             #md5(id+passwd+chall)
             self.chap_response_num=0
-            username=self.client_info[pkt.dst][0]
-            password=self.client_info[pkt.dst][1]
+            username=self.username
+            # username=self.client_info[pkt.dst][0]
+            # password=self.client_info[pkt.dst][1]
+            password=self.password
             m=md5.new()
             m.update(ret['id']+password+ret['chall'])
             md5_value=m.hexdigest()
@@ -268,6 +272,8 @@ class PppoeClient(threading.Thread):
                 if self.ipcp_options.has_key(map_ipcp_dict[k]):
                     self.ipcp_options.pop(map_ipcp_dict[k])
             self.send_ipcp_req(raw)
+        elif code==0x02:
+            print "PPPoE Link Suc"
     def parser_ipcp_options(self):
         ipcp_dict={'ip':PPP_IPCP_Option_IPAddress,'dns1':PPP_IPCP_Option_DNS1,'dns2':PPP_IPCP_Option_DNS2,'nbns1':PPP_IPCP_Option_NBNS1,'nbns2':PPP_IPCP_Option_NBNS2}
         ret_str=[]
