@@ -3,7 +3,7 @@
 
 u"""
 @auther qdyxmas@gmail.com
-scapy-dhcpserver
+scapy-ScapyDhcpServer
 """
 
 import random
