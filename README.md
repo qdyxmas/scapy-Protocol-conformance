@@ -24,3 +24,7 @@ ScapyPppoeServer.py:</br>
     lcp-options 配置可选的lcp-options  mru authentication-protocol 等信息</br>
     ipcp-options 配置可选的ipcp-options ip dns nbns等信息</br>
 
+</br>
+Scapy 安装需要的文件请点击下面的链接 </br>
+包含dnet-1.12.win32-py2.7.rar pcap-1.1.win32-py2.7.rar  dnet-1.12.win-amd64-py2.7.exe pcap-1.1.win-amd64-py2.7.exe</br>
+<a href="https://pan.baidu.com/s/1bpBzi95">Download</a></br>
