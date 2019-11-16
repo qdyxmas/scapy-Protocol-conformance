@@ -1,5 +1,5 @@
 pipeline {
-	agent any
+	agent node {customWorkspace '/var/lib/jenkins/workspace/scapy-Protocol'}
 	stages {
 		stage("update code") {
 			steps {
