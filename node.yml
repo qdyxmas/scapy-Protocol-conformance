@@ -1,8 +1,8 @@
 node("script_node") {
-		stage("update code") {
-			git clone git@git.xkool.org:xkool/ui_test.git
-		}
-		stage("run unittest") {
-			sh "run unittest"
-		}
+	stage("update code") {
+		git clone https://github.com/qdyxmas/scapy-Protocol-conformance.git
 	}
+	stage("run unittest") {
+		sh "ls"
+	}
+}
