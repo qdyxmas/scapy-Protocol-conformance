@@ -1,0 +1,8 @@
+node("script_node") {
+		stage("update code") {
+			git clone git@git.xkool.org:xkool/ui_test.git
+		}
+		stage("run unittest") {
+			sh "run unittest"
+		}
+	}
