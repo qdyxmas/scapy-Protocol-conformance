@@ -1,6 +1,6 @@
 node("script_node") {
 	stage("update code") {
-		git  'https://github.com/qdyxmas/scapy-Protocol-conformance.git'
+		git credentialsId: 'd6f9aadc-bf4b-4b6d-a28c-fe4e0aa4fd48', url: 'https://github.com/qdyxmas/scapy-Protocol-conformance.git'
 	}
 	stage("run unittest") {
 		sh "ls"
