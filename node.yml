@@ -1,6 +1,6 @@
 node("script_node") {
 	stage("update code") {
-		git clone https://github.com/qdyxmas/scapy-Protocol-conformance.git
+		git  'https://github.com/qdyxmas/scapy-Protocol-conformance.git'
 	}
 	stage("run unittest") {
 		sh "ls"
